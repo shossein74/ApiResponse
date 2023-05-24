@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hossein_dev.retrofitapiresponse.ui.LoginActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glLoginTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.08"
+        android:orientation="horizontal" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgLoginLogo"
+        android:layout_width="140dp"
+        android:layout_height="80dp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toBottomOf="@id/glLoginTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:text="Hossein_dev"
+        android:gravity="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="?colorPrimaryVariant"
+        app:layout_constraintTop_toBottomOf="@id/glLoginTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imgLoginLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:textColor="?colorOnBackground"
+        android:textSize="16sp"
+        android:text="Welcome" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWelcomeSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:textColor="?colorOnSurface"
+        android:textSize="11sp"
+        android:text="Handle retrofit api response" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcomeSubtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:hint="Username"
+        app:hintAnimationEnabled="true"
+        app:boxStrokeColor="?colorPrimary"
+        app:startIconDrawable="@drawable/ic_person"
+        app:startIconTint="?colorPrimaryVariant"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="12sp"
+            android:textDirection="ltr"
+            android:textAlignment="viewEnd"
+            android:textColor="?colorOnBackground" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        app:layout_constraintTop_toBottomOf="@id/inputLayoutUsername"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="8dp"
+        android:hint="Password"
+        app:hintAnimationEnabled="true"
+        app:boxStrokeColor="?colorPrimary"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:startIconTint="?colorPrimaryVariant"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
+        android:textAlignment="viewEnd"
+        app:endIconMode="password_toggle"
+        app:endIconTint="?colorPrimaryVariant">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="12sp"
+            android:inputType="textPassword"
+            android:textAlignment="viewEnd"
+            android:textColor="?android:colorBackground" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginHorizontal="24dp"
+        android:paddingHorizontal="8dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        app:layout_constraintTop_toBottomOf="@id/inputLayoutPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cornerRadius="24dp"
+        android:layout_marginTop="0dp"
+        android:textColor="?colorSecondary"
+        android:textSize="9dp"
+        android:visibility="visible"
+        android:text="I forget password" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginHorizontal="24dp"
+        app:backgroundTint="?colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/btnForgotPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cornerRadius="24dp"
+        android:layout_marginTop="0dp"
+        android:textColor="?colorOnPrimary"
+        android:textSize="12sp"
+        android:text="SignIn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
